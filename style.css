@@ -1,3 +1,8 @@
+* {
+  font-family: 'Mochiy Pop P One', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -16,6 +21,6 @@
   border: 1px solid green;
 }
 
-#pixel:hover {
+/* #pixel:hover {
   background-color: black;
-}
+} */
