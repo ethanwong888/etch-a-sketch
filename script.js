@@ -8,14 +8,21 @@ let currentSize = DEFAULT_SIZE;
 
 const container = document.querySelector(".container");
 const colorPicker = document.getElementById("colorPicker");
+const rainbow = document.getElementById("rainbowBtn");
 const sizeSlider = document.getElementById("sizeSlider");
 const gridSize = document.getElementById("gridSize");
 
+
+
+function setMode(mode) {
+  currentMode = mode;
+}
 
 function setDrawingColor(color){
   currentColor = color;
 }
 colorPicker.oninput = (e) => setDrawingColor(e.target.value);
+rainbow.onclick = () => setMode("rainbow");
 
 
 
@@ -68,8 +75,14 @@ document.body.onmouseup = () => (mouseClicked = false)
 
 function draw(e){
   if (e.type === 'mouseover' && !mouseClicked) return
-  if (mouseClicked && currentMode == "color") {
+  else if (currentMode == "color") {
     e.target.style.backgroundColor = currentColor;
+  }
+  else if (currentMode == "rainbow") {
+    const R = Math.floor(Math.random() * 256);
+    const G = Math.floor(Math.random() * 256);
+    const B = Math.floor(Math.random() * 256);
+    e.target.style.backgroundColor = `rgb(${R}, ${G}, ${B})`;
   }
   
 }
