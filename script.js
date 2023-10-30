@@ -8,7 +8,10 @@ let currentSize = DEFAULT_SIZE;
 
 const container = document.querySelector(".container");
 const colorPicker = document.getElementById("colorPicker");
+const color = document.getElementById("colorBtn");
 const rainbow = document.getElementById("rainbowBtn");
+const erase = document.getElementById("eraserBtn");
+const clear = document.getElementById("clearBtn");
 const sizeSlider = document.getElementById("sizeSlider");
 const gridSize = document.getElementById("gridSize");
 
@@ -22,7 +25,10 @@ function setDrawingColor(color){
   currentColor = color;
 }
 colorPicker.oninput = (e) => setDrawingColor(e.target.value);
+color.onclick = () => setMode("color");
 rainbow.onclick = () => setMode("rainbow");
+erase.onclick = () => setMode("eraser");
+clear.onclick = () => changeSize(currentSize);
 
 
 
@@ -65,6 +71,11 @@ function drawGrid(currentSize) {
   }
 }
 
+function reloadGrid() {
+  clearGrid();
+  drawGrid(currentSize);
+}
+
 
 
 
@@ -83,6 +94,9 @@ function draw(e){
     const G = Math.floor(Math.random() * 256);
     const B = Math.floor(Math.random() * 256);
     e.target.style.backgroundColor = `rgb(${R}, ${G}, ${B})`;
+  }
+  else if (currentMode == "eraser") {
+    e.target.style.backgroundColor = '#FFFFFF';
   }
   
 }
