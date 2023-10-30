@@ -13,7 +13,6 @@ const gridSize = document.getElementById("gridSize");
 
 
 function setDrawingColor(color){
-  // color (input) should be the new color selected
   currentColor = color;
 }
 colorPicker.oninput = (e) => setDrawingColor(e.target.value);
@@ -69,7 +68,7 @@ document.body.onmouseup = () => (mouseClicked = false)
 
 function draw(e){
   if (e.type === 'mouseover' && !mouseClicked) return
-  if (mouseClicked) {
+  if (mouseClicked && currentMode == "color") {
     e.target.style.backgroundColor = currentColor;
   }
   
