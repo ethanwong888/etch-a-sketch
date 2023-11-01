@@ -1,5 +1,7 @@
 # etch-a-sketch
 
-etch a sketch drawing app
+Etch-a-sketch drawing app
+Created with HTML, CSS, and JS
 
-https://raw.githack.com/ethanwong888/etch-a-sketch/main/index.html
+[Live Demo](https://raw.githack.com/ethanwong888/etch-a-sketch/main/index.html)
+
