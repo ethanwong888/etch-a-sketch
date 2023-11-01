@@ -2,22 +2,31 @@
   font-family: 'Roboto Mono', monospace;
 }
 
+body{
+  text-align: center;;
+}
+.drawing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button {
+  /* width: 20px;
+  height: 10px; */
+}
+
 .container {
   display: grid;
   width: 500px;
   height: 500px;
+  align-self: center;;
 
   border: 2px solid black;
 }
 
 #pixel {
-  /* height: 1fr;
-  /* width: 1fr; */
-  /* margin: 0px;
-  border: 1px solid green; */
   user-select: none;
 }
 
-/* #pixel:hover {
-  background-color: black;
-} */
+
