@@ -3,8 +3,10 @@
 }
 
 body{
-  text-align: center;;
+  text-align: center;
+  background-color: #fefae0;
 }
+
 .drawing {
   display: flex;
   flex-direction: column;
@@ -12,21 +14,39 @@ body{
 }
 
 button {
-  /* width: 20px;
-  height: 10px; */
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e9edc9;
 }
 
 .container {
   display: grid;
-  width: 500px;
-  height: 500px;
-  align-self: center;;
-
-  border: 2px solid black;
+  width: 550px;
+  height: 550px;
+  align-self: center;
+  border: 1px solid #333333;
+  background-color: white;
 }
 
 #pixel {
   user-select: none;
+}
+
+#colorPicker{
+  margin-top: 20px;
+}
+
+footer {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left:0px;
+  bottom:0px;
+  height:40px;
+  width:100%;
+  background:#faedcd;
+  border: 1px solid #333333;
 }
 
 
